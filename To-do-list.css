@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 720px; /* Increased the max width */
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #e9eaeb;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.text-input, .date-input, .add-button {
+    margin: 5px;
+}
+
+.add-button {
+    border: none;
+    outline: none;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    width: 100%;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    word-wrap: break-word; /* Ensure long words break to the next line */
+}
+
+/* Custom checkbox styling */
+/* Custom checkbox styling */
+.task-check {
+    position: relative;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid rgb(185, 185, 185); /* Outline color (light orange) */
+    background: white; /* Initial background color */
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+}
+
+.task-check:checked {
+    background: rgb(255, 89, 69); /* Light orange background when checked */
+}
+
+.task-check:checked::before {
+    content: '\2713'; /* Unicode checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: white; /* Checkmark color */
+}
+
+/* Strikethrough styling */
+.strikethrough {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.input-task{
+    overflow: hidden;
+    flex: 1; /* Ensure it takes available space */
+    margin-right: 10px;
+}
+
+.input-task div {
+    word-break: break-word; 
+}
+
+.date-input {
+    flex-shrink: 0;
+}
+
+.js-result {
+    margin-top: 20px;
+}
+
+.todo-grid .task-item .delete-button {
+    color: #ff5945;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+.delete-button{
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 30px;
+    background: #edeef0;
+    border-radius: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .text-input, .date-input, .add-button {
+        margin: 10px 0;
+    }
+
+    .text-input, .date-input {
+        padding: 20px;
+    }
+
+    .add-button {
+        padding: 15px 30px;
+    }
+}
