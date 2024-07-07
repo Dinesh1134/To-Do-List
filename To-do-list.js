@@ -41,7 +41,7 @@ function renderTodo() {
 
                 <div class="input-task col-md-8 col-sm-8 col-8 ${strikethroughClass}">${name}</div> 
 
-                <div class="input col-md-3 col-sm-3 col-4 ${strikethroughClass}">${dueDate}</div> 
+                <div class="input col-md-3 col-sm-4 col-4 ${strikethroughClass}">${dueDate}</div> 
 
                 <button class="delete-button js-delete-button" data-index="${index}"><i class="bi bi-trash-fill"></i></button> 
             </div>`;
